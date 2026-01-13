@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn-primary {
+    @apply bg-teal-700 text-white rounded-full px-8 py-4 font-semibold shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 inline-flex items-center justify-center;
+  }
+  
+  .btn-secondary {
+    @apply border-2 border-teal-700 text-teal-700 rounded-full px-8 py-4 font-semibold hover:bg-teal-50 transition-all duration-300 inline-flex items-center justify-center;
+  }
+  
+  .card-premium {
+    @apply bg-white rounded-2xl p-8 md:p-10 shadow-sm hover:shadow-md transition-shadow duration-300;
+  }
+  
+  .section-padding {
+    @apply py-20 md:py-28 lg:py-32;
+  }
+  
+  .container-padding {
+    @apply px-4 sm:px-6 lg:px-8;
+  }
+  
+  .heading-1 {
+    @apply text-5xl md:text-6xl lg:text-7xl font-light tracking-tighter leading-tight;
+  }
+  
+  .heading-2 {
+    @apply text-3xl md:text-4xl lg:text-5xl font-light tracking-tight leading-tight;
+  }
+  
+  .body-text {
+    @apply text-base md:text-lg leading-relaxed text-gray-700;
+  }
+}

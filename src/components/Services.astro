@@ -1,0 +1,67 @@
+---
+const services = [
+  {
+    icon: 'M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01',
+    title: 'Preventative Medicine',
+    description: 'Comprehensive health screenings and preventive care to keep you healthy and catch potential issues early.'
+  },
+  {
+    icon: 'M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z',
+    title: 'Chronic Disease Management',
+    description: 'Expert care for diabetes, hypertension, heart disease, and other chronic conditions with personalized treatment plans.'
+  },
+  {
+    icon: 'M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z',
+    title: 'Family-Centered Care',
+    description: 'Treating our patients like family with compassionate, personalized attention in a comfortable environment.'
+  },
+  {
+    icon: 'M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z',
+    title: 'Health Screenings',
+    description: 'Regular check-ups and screenings to monitor your health and detect any concerns before they become serious.'
+  },
+  {
+    icon: 'M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4',
+    title: 'On-Site Lab Services',
+    description: 'Convenient blood work and lab testing right in our office through American Esoteric Laboratories (AEL).'
+  },
+  {
+    icon: 'M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z',
+    title: 'Telehealth Options',
+    description: 'Secure video consultations available for your convenience when you cannot visit our office in person.'
+  }
+];
+---
+
+<section id="services" class="section-padding bg-gray-50 section-animate">
+  <div class="max-w-7xl mx-auto container-padding">
+    <div class="text-center mb-16 space-y-4">
+      <h2 class="heading-2 text-gray-900">
+        Comprehensive <span class="text-teal-700">Healthcare Services</span>
+      </h2>
+      <p class="body-text max-w-3xl mx-auto">
+        Our board certified physicians provide a full range of internal medicine services, focusing on your overall health and well-being.
+      </p>
+    </div>
+    
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {services.map((service, index) => (
+        <div class="card-premium group card-animate" style={`animation-delay: ${index * 100}ms`}>
+          <div class="w-16 h-16 bg-teal-100 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-teal-200 transition-colors duration-300">
+            <svg class="w-8 h-8 text-teal-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={service.icon}></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
+          <p class="text-gray-600 leading-relaxed">{service.description}</p>
+        </div>
+      ))}
+    </div>
+    
+    <div class="mt-16 text-center">
+      <a href="https://mycw144.ecwcloud.com/portal20180/jsp/jspnew/preRegistration_new.jsp" target="_blank" rel="noopener noreferrer" class="btn-primary">
+        Pre-Register as a New Patient
+      </a>
+    </div>
+  </div>
+</section>
